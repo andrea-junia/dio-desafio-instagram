@@ -1,0 +1,389 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-family: sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background-color: #FAFAFA;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.insta-home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    height: 80vh;  
+}
+
+.insta-esquerda{ 
+    display: flex;
+    align-items: flex-end;
+    width: 55%;  
+    height: 800px; 
+    padding: 10px;    
+    background: url('images/phone.png') center no-repeat;
+    background-size: contain;
+}
+
+.insta-direita{
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    margin-top: 90px;
+    box-sizing: border-box;
+    height: 800px; 
+    align-items: flex-start;
+}
+
+.insta-login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    height: 40vh;
+    width: 100%;
+    border: 1px solid #ccc;
+    margin-top: 2rem;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    padding-top: 50px;
+    height: 40%;
+}
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 5px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #FAFAFA;
+    font-size: 12px;
+}
+
+input[type=submit] {
+    width: 100%;
+    height: 32px;
+    background-color: #88c3e6;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 5px 9px;
+    color: white;
+    margin: 5px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.ou{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #ccc;
+    font-weight: bold;
+    font-size: 15px;
+    margin: 25px;
+    width: 80%;
+}
+
+.ou::before,
+.ou::after{
+    content: '';
+    background-color: #ccc;
+    width: 100px;
+    height: 1px;
+}
+
+.fb{
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    color: #385185;
+    margin-top: 15px;
+}
+
+.senha{
+    padding: 20px;
+    color: #385185;
+    font-size: 12px;
+}
+
+.cadastre{
+    align-items: center;
+    justify-content: center;
+    margin-top: 12px;
+    height: 70px;
+    padding: 5px 9px;
+}
+
+.cadastre strong{
+    color: #3597cf;
+}
+
+.app{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1.3rem 0;
+}
+
+.download {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 3px;
+}
+  
+.app-download {
+    height: 3rem;
+    width: 50%;
+    margin-top: 15px;
+    background-size: contain;
+}
+
+.app-download:nth-child(1) {
+    background-image: url("images/app-store.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.app-download:nth-child(2) {
+    background-image: url("images/google-play.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.footer{
+    width: 90%; 
+    height: 10vh;
+    padding: 0 25rem;
+    color: rgb(133, 131, 131);
+}
+
+.footer-linha{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 0;
+    font-size: 12px;
+}
+
+.footer-linha div, p{
+    font-size: 12px;
+}
+
+.footer-linha p{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-linha:nth-child(2){
+    width: 50%;
+    margin: 0 25%;
+}
+
+.footer-linha:nth-child(3){
+    width: 30%;
+    margin: 0 30%;
+}
+
+.footer-linha:nth-child(4){
+    width: 75%;
+    margin: 0 20%;
+}
+
+.footer-linha:nth-child(5){
+    display: none;
+}
+
+/*tratando responsividade mobile*/
+@media(max-width: 1770px){
+    .footer-linha:nth-child(1){
+        font-size: 10px;
+    }
+
+}
+
+@media(max-width: 1629px){
+
+    .insta-home{
+        width: 50%;
+        height: 70%;
+    }
+
+    .insta-esquerda{
+        width: 50%;
+        height: 50vh;
+        align-items: flex-end;
+        padding-left: 10rem;
+    }
+
+    .insta-direita{
+        height: 50vh;
+        align-items: flex-start;
+        margin: 0;
+    }
+
+    .insta-login{
+        height: 40vh;
+        width: 80%;
+        margin-top: 1rem;
+        font-size: 10px;
+    }
+
+    .logo{
+        max-width: 120px;
+        max-height: 50px;
+        margin-top: 2.5rem;
+        margin-bottom: 2px;
+    }
+
+    form{
+        padding-top: 10px;
+        height: 50%;
+    }
+
+    input[type=text], select {
+        font-size: 10px;
+        height: 10px;
+    }
+
+    input[type=submit] {
+        width: 100%;
+        height: 26px;
+        font-size: 10px;
+    }
+
+    .ou, .fb, .senha{
+        margin: 5px 0;
+        padding: 0;
+        font-size: 10px;
+    }
+    
+    .cadastre, .app{
+        width: 80%;
+        height: 50%;
+    }
+
+    .cadastre p,strong{
+        font-size: 10px;
+    }
+
+    .footer{
+        width: 100%;
+    }
+
+    .footer-linha div, p{
+        font-size: 10px;
+    }
+
+    .footer-linha{
+        justify-content: space-between;
+    }
+
+    .footer-linha:nth-child(3){
+        width: 40%;
+    }
+    
+}
+
+@media(max-width: 1467px){
+    .footer-linha{
+        font-size: 8px;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+    } 
+}
+
+@media(max-width: 1000px){
+
+    .insta-home{
+        height: 80%;
+        width: 80%;
+    }
+
+    .insta-direita{
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .insta-login, .app{
+        width: 40%;
+    }
+
+    .app{
+        height: 50%;
+    }
+
+    .insta-esquerda{
+        display: none;
+    }
+
+    .footer{
+        align-items: center;
+        padding: 0;
+    }
+
+    .footer-linha:nth-child(4){
+        width: 100%;
+        margin: 0;
+    }   
+    
+    .footer-linha:nth-child(1),
+    .footer-linha:nth-child(2),
+    .footer-linha:nth-child(3){
+        display: none;
+    }
+}
+
+@media(max-width: 629px){
+
+    .insta-home{
+        width: 100%;
+    }
+
+    .insta-login{
+        border: none;
+        background-color: inherit;
+    }
+
+    .app{
+        display: none;
+    }    
+
+    .footer-linha:nth-child(4){
+        display: none;
+    }  
+
+    .footer-linha:nth-child(5){
+        display: block;
+    }
+}
